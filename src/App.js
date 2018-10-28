@@ -31,11 +31,7 @@ class App extends Component {
       <div>
         <Input value={this.state.input} change={this.inputTaskHandler} />
         <Button addTask={this.addTaskHandler}>Add Task</Button>
-        <ul>
-          {tasks.map((t, i) => (
-            <AllTasks key={i} task={t} />
-          ))}
-        </ul>
+        <AllTasks allTasks={tasks} />
       </div>
     );
   }
